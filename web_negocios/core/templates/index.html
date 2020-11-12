@@ -1,19 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <main class="container-fluid">
-        <section class="bg-dark p-5 bg-gradient text-center">
-            <h1>{{titulo}}</h1>
-        </section>
-            <ul>
-                {% for p in productos %}
-                    <li><span>{{p.nombre}}</span> <span class="text-warning">{{p.precio}}</span></li>
-                {% endfor %}
+<main class="container-fluid">
+    <section class="bg-dark p-5 bg-gradient text-center">
+        <h1>{{titulo}}</h1>
+    </section>
+    <section class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-lg-6 col-md-6 col-sm-12 mx-auto">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for p in productos %}
+                        <div class="carousel-item {% if forloop.counter == 1 %}active {% endif %}">
+                            <img src="{{p.imagen.url}}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h4>Ofrece Tus Productos</h4>
+                            <p>Inscribe tu negocio y ofrece tus productos.</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
 
-            </ul>
-        <section>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
 {% endblock %}
-
-    
