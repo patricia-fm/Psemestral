@@ -2,3 +2,16 @@
     height: 100px;
     width: auto;
 }
+
+.icono-oferta{
+    font-size: 1.5em;
+}
+
+.texto-oferta{
+    font-size: 1em;
+}
+
+.img-prod{
+    height: 150px;
+    width: auto;
+}
