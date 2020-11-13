@@ -11,7 +11,7 @@
             {% for p in productos %}
             <div class= "col-sm-12 col-md-6 col-lg-3">
                 <div class="card">
-                    <div class= "card-header {% if p.estaEnOferta %} bg-danger {% else %} bg-warning {% endif %} text-white">
+                    <div class= "card-header {% if p.estaEnOferta %} bg-danger {% else %} bg-primary {% endif %} text-white">
                         <i class="icono-oferta fab fa-shopify"></i>
                         <span>{{p.titulo}}</span> 
                     </div>
@@ -24,6 +24,7 @@
                         {% else %}
                             <h6>$ {{p.precio | intcomma}}</h6>
                         {% endif %}
+                        <a class="btn btn-primary btn-block" href="{% url 'producto' p.id %}">Ver</a>
                     </div>
                 </div>
             </div>
