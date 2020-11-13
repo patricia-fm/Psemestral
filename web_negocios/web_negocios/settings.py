@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'core',
     'productos',
     'ckeditor',
-    'contacto'
+    'contacto',
+    'registro'
 ]
 
 MIDDLEWARE = [

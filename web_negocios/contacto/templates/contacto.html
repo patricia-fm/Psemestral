@@ -6,7 +6,22 @@
                 <h1>Contactenos para obtener información adicional</h1>
             </div>
         </div>
+        {% if 'ok' in request.GET %}
+            <div class="row mt-5"> 
+                <div class="col-lg-6 sm-12 mx-auto">
+                    <p class="alert alert-info text-center text-black">Mensaje enviado correctamente</p>
+                </div>
+            </div> 
+        {% endif%}
 
+        {% if 'error' in request.GET %}
+            <div class="row mt-5"> 
+                <div class="col-lg-6 sm-12 mx-auto">
+                    <p class="alert alert-error text-center text-black">Error al enviar mensaje</p>
+                </div>
+            </div> 
+        {% endif%}
+        
         <div class="row mt-5">
             <form action="" method="POST" class="col-lg-6 sm-12 mx-auto">
 

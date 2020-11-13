@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-sm-12 bg-dark bg-gradient text-white text-center">
+                <h1>Registre su negocio y ofresca sus productos</h1>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <form action="" method="POST" class="col-lg-6 sm-12 mx-auto">
+
+                {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">Nombre</label>
+                        {{form.nombre_dueño}}
+                        {{form.nombre_dueño.errors}}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Negocio</label>
+                        {{form.nombre_negocio}}
+                        {{form.nombre_negocio.errors}}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Producto</label>
+                        {{form.producto}}
+                        {{form.producto.errors}}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Direccion</label>
+                        {{form.direccion}}
+                        {{form.direccion.errors}}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Telefono</label>
+                        {{form.telefono}}
+                        {{form.telefono.errors}}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Descripcion</label>
+                        {{form.descripcion}}
+                        {{form.descripcion.errors}}
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block">Enviar</button>
+                    
+
+            </form>
+        </div>
+    </main>
+
+{% endblock %}

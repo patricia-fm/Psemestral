@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content%}
+    {% load humanize %}
+    <main class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
+                <div class="row bg-dark bg-gradient text-white">
+                    <div class="col-sm-12">
+                        <a href="{% url 'registro' %}"class="ml-3 text-white text-decoration-none">
+                            <i class="fas fa-chevron-circle-left h1"></i>
+                        </a>
+                        <span class="h1 ml-5">{{registro.nombre_dueño}}</span>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-sm-12">
+                      <p class="col-sm-12">{{registro.nombre_negocio | safe }}</p>  
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <p class="col-sm-12">{{registro.producto | safe }}</p>
+                </div>
+                <div class="row mt-5">
+                    <p class="col-sm-12">{{registro.direccion | safe }}</p>
+                </div>
+                <div class="row mt-5">
+                    <p class="col-sm-12">{{registro.telefono | safe }}</p>
+                </div>
+                <div class="row mt-5">
+                    <p class="col-sm-12">{{registro.descripcion | safe }}</p>
+                </div>
+               
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

@@ -21,6 +21,7 @@
                 <div class="navbar-nav">
                     
                     <a class="nav-link {% if request.path == '/' %} active {% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link {% if request.path == '/registro/' %} active {% endif %}" href="{% url 'registro' %}">Registro</a>
                     <a class="nav-link {% if request.path == '/productos/' %} active {% endif %}" href="{% url 'productos' %}">Productos</a>
                     <a class="nav-link {% if request.path == '/contacto/' %} active {% endif %}" href="{% url 'contacto' %}">Contacto</a>
                 </div>
