@@ -17,14 +17,14 @@
                         <img src="{{producto.imagen.url}}" class="img-fluid">
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row mt-5 bg-info">
                     <p class="col-sm-12">{{producto.descripcion | safe }}</p>
                 </div>
                <div class="row mt-2">
                     {% if producto.estaEnOferta %}
-                       <div class="col-sm-12 bg-warning text-white"> 
+                       <div class="col-sm-12 bg-danger text-dark"> 
                     {% else %}
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 bg-primary text-dark">
                     {% endif %}
                             <p> $ {{producto.precio | intcomma}}</p>
                         </div>
